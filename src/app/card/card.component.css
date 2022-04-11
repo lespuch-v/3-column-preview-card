@@ -1,0 +1,49 @@
+h1 {
+  font-family: "Big Shoulders Display", cursive;
+  text-transform: uppercase;
+}
+.main-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.card {
+  width: 200px;
+  height: 350px;
+  background-color: lightblue;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px,
+    rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+  padding: 50px;
+  font-family: "Lexend Deca", sans-serif;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.btn {
+  width: 170px;
+  height: 50px;
+  font-size: 1.3em;
+  border-radius: 70px;
+  border: none;
+  transition: 200ms all;
+  cursor: pointer;
+}
+.btn:hover {
+  transform: scale(1.05);
+}
+.btn:active {
+  transform: scale(1);
+}
+p {
+  color: hsla(0, 0%, 100%, 0.75);
+}
+
+/* ************* MEDIA QUERIES ************* */
+@media only screen and (max-width: 830px) {
+  .main-container {
+    flex-direction: column;
+    margin: 0 auto;
+  }
+}

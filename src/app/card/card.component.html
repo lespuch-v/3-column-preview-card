@@ -1,0 +1,25 @@
+<div class="main-container">
+  <div
+    class="card"
+    *ngFor="let card of items;"
+    [ngStyle]="{ backgroundColor: card.color }"
+  >
+    <div>
+      <img [src]="card.img" alt="image" />
+      <h1>{{ card.heading }}</h1>
+      <p>{{ card.text }}</p>
+    </div>
+    <button
+      class="btn"
+      [id]="card.id"
+      (mouseover)="isHovered = true"
+      (mouseleave)="isHovered = false"
+      [ngStyle]="{ color: card.color }"
+      [style.backgroundColor]="isHovered ? card.color : 'white'"
+      [style.color]="isHovered ? 'white' : 'black'"
+      [style.border]="isHovered ? '3px solid white' : 'none'"
+    >
+      Learn More
+    </button>
+  </div>
+</div>
